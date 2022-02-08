@@ -8,16 +8,25 @@ import HeroCard from "../HeroCard/HeroCard";
 const SearchScreen = () => {
 
   const navigate = useNavigate();
+
+  //Hook call to retireve URL params.
+  //The difference between useLocation is used when is URLSearchParams and useParams is when they
+  //para passed as a route
   const location = useLocation();
 
+  //Call to library to retrieve the params as their value in a JSON,
+  //in case there is no param it will return an empty string
   const { q = '' } = queryString.parse(location.search);
 
 
   const [{ searchText }, onChange] = useForm({ searchText: q })
 
+
+  //Filter heroes only when the param changes, this prevents rerender on state change
   const filteredHeroes = useMemo(() => getHeroesByName(q), [q]);
 
   const handleSearch = (e) => {
+    //Prevent page reload when the form is submitted
     e.preventDefault();
 
     //This will keep the current URL, but with the new params

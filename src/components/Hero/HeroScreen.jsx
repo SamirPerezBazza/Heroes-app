@@ -6,6 +6,7 @@ const HeroScreen = () => {
 
   const navigate = useNavigate()
 
+  //Hook call to retrieve url params
   const { heroId } = useParams();
 
   //Every time the dependency changes, the callback is executed
@@ -16,6 +17,7 @@ const HeroScreen = () => {
   }
 
 
+  //If the hero does not exist it will automatically redirect to the main page
   if (!hero) {
     return <Navigate to='/' />
   }

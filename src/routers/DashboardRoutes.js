@@ -12,6 +12,9 @@ const DashboardRoutes = () => {
       <Navbar />
       <div className="container">
         <Routes>
+          {/*
+            The ":" indicates a param in the url that can be retrieved in the rendered component
+          */}
           <Route path="/hero/:heroId" element={<HeroScreen />} />
           <Route path="/marvel" element={<MarvelScreen />} />
           <Route path="/dc" element={<DcScreen />} />

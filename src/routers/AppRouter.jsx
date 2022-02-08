@@ -4,6 +4,8 @@ import LoginScreen from "../components/Login/LoginScreen";
 import DashboardRoutes from "./DashboardRoutes";
 
 export const AppRouter = () => {
+
+  //The BrowserRouter will automatically redirect any direction that is not /login
   return (
     <BrowserRouter>
       <Routes>
