@@ -15,11 +15,11 @@ const DashboardRoutes = () => {
           {/*
             The ":" indicates a param in the url that can be retrieved in the rendered component
           */}
-          <Route path="/Heroes-App/hero/:heroId" element={<HeroScreen />} />
-          <Route path="/Heroes-App/marvel" element={<MarvelScreen />} />
-          <Route path="/Heroes-App/dc" element={<DcScreen />} />
-          <Route path="/Heroes-App/search" element={<SearchScreen />} />
-          <Route path="/Heroes-App/" element={<MarvelScreen />} />
+          <Route path="/hero/:heroId" element={<HeroScreen />} />
+          <Route path="/marvel" element={<MarvelScreen />} />
+          <Route path="/dc" element={<DcScreen />} />
+          <Route path="/search" element={<SearchScreen />} />
+          <Route path="/" element={<MarvelScreen />} />
         </Routes>
       </div>
     </>
