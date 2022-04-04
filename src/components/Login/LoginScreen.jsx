@@ -20,8 +20,11 @@ const LoginScreen = () => {
     }
 
     dispatch(action);
+
+    const lastPath = localStorage.getItem('lastPath') || '/marvel';
+
     //the "replace" prop is to prevent the page addition to the stack
-    navigate('/marvel', { replace: true });
+    navigate(lastPath, { replace: true });
   }
 
   return (
